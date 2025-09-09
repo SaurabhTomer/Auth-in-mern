@@ -1,10 +1,11 @@
 const router = require('express').Router();
-const {ensureAuthnticated} = require('../Middlewares/auth')
+const {ensureAuthenticated} = require('../Middlewares/auth')
+
+const express = require('express')
 
 
-
-
-router.get('/',ensureAuthnticated, (req,res) => {
+router.get('/',ensureAuthenticated, (req,res) => {
+    
     res.status(200).json([
         {
             name:"mobile",
